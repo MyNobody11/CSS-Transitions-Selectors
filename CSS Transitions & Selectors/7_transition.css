@@ -1,0 +1,97 @@
+css
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightgrey;
+}
+main {
+    margin-left: 220px;
+    padding: 20px;
+}
+header {
+    background-color: red;
+    text-align: center;
+    padding: 30px;
+    font-size: 35px;
+    font-weight: bold;
+}
+/* menu*/
+#menuItems {
+    position: fixed;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+#menuItems button {
+    background-color: blue;
+    color: white;
+    border: 1px solid black;
+    font-size: large;
+    padding: 15px;
+    cursor: pointer;
+}
+#menuItems button:hover {
+    background-color: coral;
+}
+#jumpMenu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background-color: coral;
+    display: none;
+}
+#jumpMenu li {
+    padding: 5px 10px;
+}
+#jumpMenu a {
+    color: none;
+    text-decoration: none;
+}   
+/*the hovering mechanic*/
+#jumpMenu a:hover {
+    background-color: blue;
+    color: white;
+    display: block;
+}
+#container {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    gap: 40px;
+}
+article {
+    color: lightgray;
+    transition: all 2s;
+}
+#recentArticles:hover + #jumpMenu {
+    display: block;
+}
+
+article:hover {
+    color: black;
+    transform: scale(1);
+}
+article p:first-of-type::first-letter{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+a[href*="google"]::after {
+    content: "~>";
+    margin-left: 5px;
+}
+#thanks {
+    bottom: 20px;
+    right: 20px;
+    font-size: xx-large;
+    color: #555;
+    background-color: turquoise;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+footer {
+    margin-top: 40px;
+}
